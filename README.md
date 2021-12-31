@@ -1,5 +1,5 @@
 # lavrigon
-### A Python Webservice to check the status of any given local service via a REST call (*eg. using uptime kumar*)
+### *A Python Webservice to check the status of any given local service via a REST call (eg. using uptime kumar)*
 
 ## Purpose
 Applications such as [Uptime Kuma](https://github.com/louislam/uptime-kuma) help monitoring web applications by making REST Api calls (*and other fancy stuff*). 
@@ -19,6 +19,45 @@ Alternatively you can specify port and host:
 ```bash
 flask run -h 0.0.0.0 -p 5007
 ```
+
+## Le config options
+All config options are specified in the `config.yml`.
+```yml
+Server:
+  statusPage: 'status'
+  ```
+  `statusPage` refers to the page you have to access a service eg. `localhost:5000/{statusPage}/service`
+
+  ```yml
+  ReturnCodes:
+  working:
+    #return code of the script
+    code: 0 
+    #optional html message returned
+    message: "Service up and runnning" 
+    #html return code, important for eg. uptime kumar
+    html: 200 
+  error:
+    code: 1
+    message: "Service unreachable"
+    html: 501
+```
+```yml
+#This is where the actual scripts are registered
+Scripts:
+  # A short description
+  # This script tests the basic functionality
+  # The name defines the URL by which the service can checked eg 
+  # localhost:5000/status/default in this case
+  default:
+    # whether the script is enabled or not
+    enabled: true
+    # executable used, eg bash for a script, python for a .py       
+    exec: "/bin/bash" 
+    # path of the script as seen by the flask app
+    path: "scripts/defaultTest.sh" 
+```
+
 
 ## Contributing
 Feel free to share the scripts you use and create a pull requests for them to be added to this git repo under [scripts](https://github.com/LordBurtz/lavrigon/tree/main/app/scripts).
