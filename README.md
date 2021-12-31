@@ -30,17 +30,17 @@ Server:
 
   ```yml
   ReturnCodes:
-  working:
-    #return code of the script
-    code: 0 
-    #optional html message returned
-    message: "Service up and runnning" 
-    #html return code, important for eg. uptime kumar
-    html: 200 
-  error:
-    code: 1
-    message: "Service unreachable"
-    html: 501
+    working:
+        #return code of the script
+        code: 0 
+        #optional html message returned
+        message: "Service up and runnning" 
+        #html return code, important for eg. uptime kumar
+        html: 200 
+    error:
+        code: 1
+        message: "Service unreachable"
+        html: 501
 ```
 ```yml
 #This is where the actual scripts are registered
