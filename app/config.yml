@@ -1,6 +1,6 @@
 Server:
   host: " 0.0.0.0"  # | both have to be changed by running
-  port: 5001        # | ~ run -h {host} -p {port}
+  port: 5001        # | flask run -h {host} -p {port}
   statusPage: 'status'
 
 ReturnCodes:

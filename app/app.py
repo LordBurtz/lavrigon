@@ -1,7 +1,6 @@
 from flask import Flask, render_template
-from markupsafe import escape
-import yaml
 import subprocess as sp
+import yaml
 
 with open('config.yml', 'r') as file:
     config = yaml.safe_load(file)
