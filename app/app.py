@@ -34,6 +34,9 @@ def greetUser(user):
 def getStatus(service):
     if not service in config['Scripts']:
         return "Script not registered in config under Scripts", 501
+
+    if not config['Scripts'][service]['enabled']:
+        return "This script is disabled", 501
     
     script = sp.run([config['Scripts'][service]['exec'], config['Scripts'][service]['path']])
     return returnCodes[str(script.returncode)]['message'], returnCodes[str(script.returncode)]['html']
