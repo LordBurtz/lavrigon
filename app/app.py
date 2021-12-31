@@ -45,4 +45,3 @@ def getStatus(service):
 @app.errorhandler(404)
 def error404(error):
     return render_template('404.html', name="error"), 404
-
