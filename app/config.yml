@@ -1,0 +1,21 @@
+Server: #WIP not implemented
+  url: " 0.0.0.0"
+  port: 5000
+  statusPage: 'status'
+
+ReturnCodes:
+  working:
+    code: 0
+    message: "Service up and runnning"
+    html: 200
+  error:
+    code: 1
+    message: "Service unreachable"
+    html: 501
+
+
+Scripts:
+  path: 'scripts' #without trailing slash
+  default:
+    name: "default"
+    path: "scripts/defaultTest.sh"
