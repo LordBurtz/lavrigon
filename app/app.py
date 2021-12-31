@@ -6,9 +6,10 @@ import subprocess as sp
 with open('config.yml', 'r') as file:
     config = yaml.safe_load(file)
 
+host = config['Server']['host']
+port = config['Server']['port']
+
 statusPage = config['Server']['statusPage']
-statusPage = 'status'
-scriptPath = config['Scripts']['path']
 returnCodes = {}
 
 for retCode in config['ReturnCodes']:
@@ -18,6 +19,9 @@ for retCode in config['ReturnCodes']:
     }
 
 app = Flask(__name__)
+# app.config.update(
+#    SERVER_NAME=f"{host}:{port}"
+# )
 
 @app.route("/")
 def main() -> str:
@@ -27,7 +31,7 @@ def main() -> str:
 def greetUser(user):
     return "Hello " + user
 
-@app.route('/status/<string:service>')
+@app.route(f'/{statusPage}/<string:service>')
 def getStatus(service):
     if not service in config['Scripts']:
         return "Script not registered in config under Scripts", 501

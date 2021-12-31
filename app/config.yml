@@ -1,13 +1,13 @@
-Server: #WIP not implemented
-  url: " 0.0.0.0"
-  port: 5000
+Server:
+  host: " 0.0.0.0"  # | both have to be changed by running
+  port: 5001        # | ~ run -h {host} -p {port}
   statusPage: 'status'
 
 ReturnCodes:
   working:
-    code: 0
-    message: "Service up and runnning"
-    html: 200
+    code: 0 #return code of the bash script
+    message: "Service up and runnning" #optional html message displayed
+    html: 200 #html return code, important for eg. uptime coomer
   error:
     code: 1
     message: "Service unreachable"
@@ -15,7 +15,6 @@ ReturnCodes:
 
 
 Scripts:
-  path: 'scripts' #without trailing slash
   default:
     name: "default"
     path: "scripts/defaultTest.sh"

@@ -1,4 +1,4 @@
 #!/bin/bash
 
 #just for testing purposes
-exit 1
+exit 0
