@@ -16,5 +16,6 @@ ReturnCodes:
 
 Scripts:
   default:
-    name: "default"
-    path: "scripts/defaultTest.sh"
+    exec: "/bin/bash" #executable used, eg bash for a script
+    name: "default" #name by which the api call is made
+    path: "scripts/defaultTest.sh" #path of the file as seen by the flask app
