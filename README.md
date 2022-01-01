@@ -6,6 +6,11 @@ Applications such as [Uptime Kuma](https://github.com/louislam/uptime-kuma) help
 This Project extends this functionality to all services running locally. This is archieved by running scripts locally that check the functionality of the requested service and returning an appropriate html return code.
 The project is built on scripts users write to check whether a service is functioning. Those scripts have to registered in the `config.yml`.
 
+## Disclaimer
+This is not designed to be exposed to the internet or used in a production deployment. 
+But it is designed to be run at home for applications such as uptime kumar or similar apps.
+The app should work perfectly well in small environments.
+
 ## Setup
 Clone the repository and enter the directory
 ```bash
