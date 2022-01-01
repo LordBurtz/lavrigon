@@ -26,7 +26,7 @@ Install the requiered dependencies via pip
 pip install -r requierements.txt 
 ```
 <details>
-<summary>Flask install Errors</summary>
+<summary>Flask install fails</summary>
 If pip or pip3 fails to install Flask correctly try installing it via your package manager<br>
 </details><br>
 
