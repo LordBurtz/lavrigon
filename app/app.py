@@ -9,7 +9,6 @@ config = ""
 returnCodes = ""
 setup = False
 
-
 def badException(reason):
     global setup
     global mainMessage
