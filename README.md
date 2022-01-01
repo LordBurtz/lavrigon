@@ -1,6 +1,6 @@
 # lavrigon
 ### *A Python Webservice to check the status of any given local service via a REST call (eg. using uptime kumar)*
-<br><br>
+<br>
 
 ## Purpose
 Applications such as [Uptime Kuma](https://github.com/louislam/uptime-kuma) help monitoring web applications by making REST Api calls (*and other fancy stuff*). 
