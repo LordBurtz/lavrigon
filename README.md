@@ -16,6 +16,10 @@ Clone the repository and enter the directory
 ```bash
 git clone https://github.com/LordBurtz/lavrigon.git && cd lavrigon
 ```
+Install the requiered dependencies via pip
+```bash
+pip install -r requierements.txt 
+```
 Then run the flask app
 ```bash
 cd app && flask run 
