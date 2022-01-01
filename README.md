@@ -20,6 +20,7 @@ Install the requiered dependencies via pip
 ```bash
 pip install -r requierements.txt 
 ```
+>!If flask fails to install, try installing it via your package manager
 Then run the flask app
 ```bash
 cd app && flask run 
